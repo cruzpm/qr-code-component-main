@@ -1,0 +1,92 @@
+:root {
+    --fontOutfit : 'Outfit', sans-serif;
+    --white: hsl(0, 0%, 100%);
+    --lightGray: hsl(212, 45%, 89%);
+    --grayishBlue: hsl(220, 15%, 55%);
+    --darkBlue: hsl(218, 44%, 22%);
+}
+
+html {
+    /* para hacer que 1rem = 10 px */
+    font-size: 62.5%;
+    /*Snippet de https://www-paulirish-com.translate.goog/2012/box-sizing-border-box-ftw/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=sc*/
+    /* inicio Snippet modelo caja de: www-paulirish-com */
+    box-sizing: border-box;
+    /* fin  Snippet modelo caja : www-paulirish-com*/
+}
+
+/*Snippet de https://www-paulirish-com.translate.goog/2012/box-sizing-border-box-ftw/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=sc*/
+/* inicio Snippet modelo caja de: www-paulirish-com */
+/*
+ eel primer "*" indica que seleccione todos los elementos del html y a esos se les aplicara el box-sizing : ingherit
+ al cual el padding, el margen y el borde se tomara dekk width declarado, es decir si declaras 200 de width
+ y tambien le defines un pading de 20px el elemento seguira midiendo 200 sin importar cuanto aumente el padding o el border
+*/
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/* fin  Snippet modelo caja : www-paulirish-com*/
+
+
+
+body {
+    font-size: 1.5rem;
+    font-family: var(--fontOutfit);
+    background-color: var(--lightGray);
+
+    /* background-image: url('../design/desktop-design.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 50%; */
+}
+
+img{
+    display: block;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32rem;
+    height: 50rem;
+    
+
+    border-radius: 2rem;
+    overflow: hidden;
+    
+    background-color: var(--white);
+    padding: 1.5rem;
+}
+.qr-image {
+    border-radius: 1.5rem;
+}
+.qr-image img {
+     width: 100%;
+    /* width: 26rem; */
+    border-radius: 2rem;
+}
+
+.qr-info {
+    padding-top: 1.2rem;
+    text-align: center;
+
+}
+.qr-info h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+}
+.qr-info p {
+    padding: 0 1.5rem;
+    line-height: 1.3;
+    font-size: 16px;
+    
+    color: var(--grayishBlue);
+}
